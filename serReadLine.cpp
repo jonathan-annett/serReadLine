@@ -4,11 +4,11 @@
 
 int readLineBufferFill = 0; 
 int readLineLength = 0;
-char readLineBuffer[READ_LINE_BUF_SIZE] = { NULL };
+char readLineBuffer[READ_LINE_BUF_SIZE] = { 0 };
 bool readLineLoop (char c) {
     
     if ( (c == '\n') || (c == '\r')  ) {
-        readLineBuffer[(readLineLength=readLineBufferFill)]=NULL;
+        readLineBuffer[(readLineLength=readLineBufferFill)]=(char) 0;
         readLineBufferFill=0;
         return true;
     } else {
